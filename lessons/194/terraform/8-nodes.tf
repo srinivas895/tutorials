@@ -45,12 +45,12 @@ resource "aws_eks_node_group" "general" {
 
   # You probably want ON_DEMAND
   capacity_type  = "SPOT"
-  instance_types = ["t3.medium"]
+  instance_types = ["t2.medium"]
 
   scaling_config {
-    desired_size = 1
-    max_size     = 5
-    min_size     = 0
+    desired_size = 2
+    max_size     = 3
+    min_size     = 2
   }
 
   update_config {
